@@ -1,0 +1,26 @@
+{
+  "name": "tictactoe4js",
+  "version": "1.0.0",
+  "description": "A tic-tac-toe library for JS. For building n x n grids",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comphonia/tictactoe4js.git"
+  },
+  "keywords": [
+    "tictactoe",
+    "ai",
+    "minimax",
+    "nxn"
+  ],
+  "author": "comphonia <online.comphonia@gmail.com> (https://comphonia.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/comphonia/tictactoe4js/issues"
+  },
+  "homepage": "https://github.com/comphonia/tictactoe4js#readme"
+}
