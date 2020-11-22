@@ -1,6 +1,6 @@
 // Umpire
-export const WLD = Object.freeze({ WIN: "WIN", LOSS: "LOSS", DRAW: "DRAW" });
-
+import { WLD } from "./constants.js";
+  // TODO: Cleanup, make DRY
 class Umpire {
   constructor() {
     this.moves = 0;
@@ -20,9 +20,7 @@ class Umpire {
       return { verdict, winner, winSlots };
     }
 
-    // TODO: Cleanup, make DRY
-
-    // check horizontal
+    // check horizontal -
     for (let i = 0; i < boardSize; i++) {
       if (_tempBoard[coord.x][i] !== player) break;
       else winSlots.push(board.getNormalizedPos({ x: coord.x, y: i }));
@@ -35,7 +33,7 @@ class Umpire {
     }
     winSlots = [];
 
-    // check vertical
+    // check vertical |
     for (let i = 0; i < boardSize; i++) {
       if (_tempBoard[i][coord.y] !== player) break;
       else winSlots.push(board.getNormalizedPos({ x: i, y: coord.y }));
@@ -48,7 +46,7 @@ class Umpire {
     }
     winSlots = [];
 
-    // check diagonal\
+    // check diagonal \
     if (coord.x === coord.y) {
       for (let i = 0; i < boardSize; i++) {
         if (_tempBoard[i][i] !== player) break;
@@ -63,7 +61,7 @@ class Umpire {
     }
     winSlots = [];
 
-    // check anti-diagonal/
+    // check anti-diagonal /
     if (coord.x + coord.y === boardSize - 1) {
       for (let i = 0; i < boardSize; i++) {
         if (_tempBoard[i][boardSize - 1 - i] !== player) break;
