@@ -1,12 +1,17 @@
-export const WLD = Object.freeze({ WIN: "WIN", LOSS: "LOSS", DRAW: "DRAW" });
-export const GameState = Object.freeze({
+const WLD = Object.freeze({ WIN: "WIN", LOSS: "LOSS", DRAW: "DRAW" });
+const GameState = Object.freeze({
   RUNNING: "RUNNING",
   PAUSED: "PAUSED",
   ENDED: "ENDED",
 });
-export const GamePiece = Object.freeze({ X: "X", O: "O" });
-export const Difficulty = Object.freeze({
+const GamePiece = Object.freeze({ X: "X", O: "O" });
+const Difficulty = Object.freeze({
   BEGINNER: "BEGINNER",
   INTERMEDIATE: "INTERMEDIATE",
   EXPERT: "EXPERT",
 });
+
+exports.WLD = WLD
+exports.GameState = GameState
+exports.GamePiece = GamePiece
+exports.Difficulty = Difficulty

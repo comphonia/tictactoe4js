@@ -1,6 +1,6 @@
 // Umpire
-import { WLD } from "./constants.js";
-  // TODO: Cleanup, make DRY
+const { WLD } = require("./constants.js");
+// TODO: Cleanup, make DRY
 class Umpire {
   constructor() {
     this.moves = 0;
@@ -81,4 +81,4 @@ class Umpire {
   }
 }
 
-export default Umpire;
+module.exports = Umpire;
