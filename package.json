@@ -1,6 +1,6 @@
 {
   "name": "tictactoe4js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A tic-tac-toe library for JS. For building n x n grids",
   "main": "lib/index.js",
   "scripts": {
