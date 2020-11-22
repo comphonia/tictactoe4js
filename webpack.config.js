@@ -5,8 +5,7 @@ const config = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'tictactoe4js.min.js',
-    iife: false
+    filename: 'tictactoe4js.js'
   },
   module: {
     rules: [

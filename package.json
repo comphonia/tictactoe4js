@@ -1,8 +1,8 @@
 {
   "name": "tictactoe4js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tic-tac-toe library for JS. For building n x n grids",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "start": "node src/index.js",
     "clean": "rm dist/tictactoe4js.js",
@@ -17,7 +17,7 @@
     "tictactoe",
     "ai",
     "minimax",
-    "nxn"
+    "n x n grid"
   ],
   "author": "comphonia <online.comphonia@gmail.com> (https://comphonia.com)",
   "license": "MIT",

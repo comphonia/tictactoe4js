@@ -1,17 +1,17 @@
 // AIBrain
-import {Difficulty} from './constants.js'
-import Player from './Player.js'
+const { Difficulty } = require("./constants.js");
+const Player = require("./Player.js");
 class Move {
   constructor({ score, point }) {
-    this.score = score
-    this.point = point
+    this.score = score;
+    this.point = point;
   }
 }
 class AIBrain extends Player {
   getMove({ board, aiPiece, aiDifficulty }) {
     switch (aiDifficulty) {
       case Difficulty.BEGINNER:
-        return this.getBeginnerAIMove(board)
+        return this.getBeginnerAIMove(board);
       default:
         break;
     }
@@ -19,10 +19,10 @@ class AIBrain extends Player {
 
   // get random empty position
   getBeginnerAIMove(board) {
-    const emptySpots = board.getEmptySpots()
-    const index = Math.floor(Math.random() * Math.floor(emptySpots.length))
-    return emptySpots[index]
+    const emptySpots = board.getEmptySpots();
+    const index = Math.floor(Math.random() * Math.floor(emptySpots.length));
+    return emptySpots[index];
   }
 }
 
-export default AIBrain;
+module.exports = AIBrain;
