@@ -2,7 +2,7 @@
 import Board from "./Board.js";
 import Umpire from "./Umpire.js";
 import AIBrain from './AIBrain.js'
-import { WLD, GamePiece, GameState } from "./constants.js";
+import {GamePiece, GameState } from "./constants.js";
 class TicTacToe {
   constructor({ size, turnTimeLimit, gameTimeLimit, startPiece }) {
     this.size = size
