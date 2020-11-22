@@ -7,4 +7,4 @@ exports.GameState = GameState
 exports.GamePiece = GamePiece
 exports.Difficulty = Difficulty
 
-module.exports = TictacToe
+exports.TictacToe = TictacToe
