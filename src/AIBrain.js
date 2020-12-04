@@ -1,19 +1,18 @@
 // AIBrain
 const { Difficulty } = require("./constants.js");
 const Player = require("./Player.js");
-class Move {
+/* class Move {
   constructor({ score, point }) {
     this.score = score;
     this.point = point;
   }
-}
+} */
 class AIBrain extends Player {
   getMove({ board, aiPiece, aiDifficulty }) {
     switch (aiDifficulty) {
       case Difficulty.BEGINNER:
         return this.getBeginnerAIMove(board);
-      default:
-        break;
+      default: return -1
     }
   }
 

@@ -5,7 +5,7 @@ class Umpire {
   constructor() {
     this.moves = 0;
   }
-  getDecision({ board, player, position }) {
+  getDecision({ board, piece, position }) {
     this.moves++;
     const _tempBoard = [...board.board];
     const boardSize = board.size;
@@ -22,12 +22,12 @@ class Umpire {
 
     // check horizontal -
     for (let i = 0; i < boardSize; i++) {
-      if (_tempBoard[coord.x][i] !== player) break;
+      if (_tempBoard[coord.x][i] !== piece) break;
       else winSlots.push(board.getNormalizedPos({ x: coord.x, y: i }));
       if (i == boardSize - 1) {
         //WIN detected
-        winner = player;
-        verdict = winner === player ? WLD.WIN : WLD.LOSS;
+        winner = piece;
+        verdict = winner === piece ? WLD.WIN : WLD.LOSS;
         return { verdict, winner, winSlots };
       }
     }
@@ -35,12 +35,12 @@ class Umpire {
 
     // check vertical |
     for (let i = 0; i < boardSize; i++) {
-      if (_tempBoard[i][coord.y] !== player) break;
+      if (_tempBoard[i][coord.y] !== piece) break;
       else winSlots.push(board.getNormalizedPos({ x: i, y: coord.y }));
       if (i == boardSize - 1) {
         //WIN detected
-        winner = player;
-        verdict = winner === player ? WLD.WIN : WLD.LOSS;
+        winner = piece;
+        verdict = winner === piece ? WLD.WIN : WLD.LOSS;
         return { verdict, winner, winSlots };
       }
     }
@@ -49,12 +49,12 @@ class Umpire {
     // check diagonal \
     if (coord.x === coord.y) {
       for (let i = 0; i < boardSize; i++) {
-        if (_tempBoard[i][i] !== player) break;
+        if (_tempBoard[i][i] !== piece) break;
         else winSlots.push(board.getNormalizedPos({ x: i, y: i }));
         if (i == boardSize - 1) {
           //WIN detected
-          winner = player;
-          verdict = winner === player ? WLD.WIN : WLD.LOSS;
+          winner = piece;
+          verdict = winner === piece ? WLD.WIN : WLD.LOSS;
           return { verdict, winner, winSlots };
         }
       }
@@ -64,13 +64,13 @@ class Umpire {
     // check anti-diagonal /
     if (coord.x + coord.y === boardSize - 1) {
       for (let i = 0; i < boardSize; i++) {
-        if (_tempBoard[i][boardSize - 1 - i] !== player) break;
+        if (_tempBoard[i][boardSize - 1 - i] !== piece) break;
         else
           winSlots.push(board.getNormalizedPos({ x: i, y: boardSize - 1 - i }));
         if (i == boardSize - 1) {
           //WIN detected
-          winner = player;
-          verdict = winner === player ? WLD.WIN : WLD.LOSS;
+          winner = piece;
+          verdict = winner === piece ? WLD.WIN : WLD.LOSS;
           return { verdict, winner, winSlots };
         }
       }

@@ -1,13 +1,14 @@
 {
   "name": "tictactoe4js",
-  "version": "1.0.4",
+  "version": "1.0.8",
   "description": "A tic-tac-toe library for JS. For building n x n grids",
   "main": "lib/index.js",
   "scripts": {
     "start": "node src/index.js",
     "clean": "rm dist/tictactoe4js.js",
-    "test": "jest",
-    "build": "webpack --mode production"
+    "test": "jest --coverage",
+    "build": "webpack --mode production",
+    "build-npm": "babel src --out-dir lib --ignore \"src/**/__tests__\""
   },
   "repository": {
     "type": "git",
@@ -26,14 +27,14 @@
   },
   "homepage": "https://github.com/comphonia/tictactoe4js#readme",
   "devDependencies": {
-    "@babel/cli": "^7.12.7",
-    "@babel/core": "^7.12.7",
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
     "@babel/preset-env": "^7.12.7",
     "babel-jest": "^26.6.3",
-    "babel-loader": "^8.2.1",
+    "babel-loader": "^8.2.2",
     "jest": "^26.6.3",
-    "prettier": "^2.2.0",
-    "webpack": "^5.6.0",
+    "prettier": "^2.2.1",
+    "webpack": "^5.9.0",
     "webpack-cli": "^4.2.0"
   },
   "dependencies": {}
